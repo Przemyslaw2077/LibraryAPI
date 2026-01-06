@@ -1,0 +1,86 @@
+﻿@LibraryApi_HostAddress = https://localhost:7261
+
+GET {{LibraryApi_HostAddress}}/authors
+
+###
+
+POST {{LibraryApi_HostAddress}}/authors
+Content-Type: application/json
+
+{
+    "firstName": "Edwart",
+  "lastName": "Kokodżambo"
+}
+
+###
+
+GET {{LibraryApi_HostAddress}}/books
+
+###
+
+POST {{LibraryApi_HostAddress}}/books
+Content-Type: application/json
+
+{
+  "title": "Pan Listonosz",
+  "year": 1999,
+  "authorId": 2
+}
+
+###
+
+POST {{LibraryApi_HostAddress}}/copies
+Content-Type: application/json
+
+{
+  "bookId": 3
+}
+
+###
+
+GET {{LibraryApi_HostAddress}}/copies
+
+###
+
+
+
+
+@id=0
+PUT {{LibraryApi_HostAddress}}/authors/{{id}}
+Content-Type: application/json
+
+{
+  //Author
+}
+
+###
+
+PUT {{LibraryApi_HostAddress}}/books/{{id}}
+Content-Type: application/json
+
+{
+  //BookCreateDto
+}
+
+###
+
+PUT {{LibraryApi_HostAddress}}/copies/{{id}}
+Content-Type: application/json
+
+{
+  //CopyCreateDto
+}
+
+###
+
+DELETE {{LibraryApi_HostAddress}}/authors/{{id}}
+
+###
+
+DELETE {{LibraryApi_HostAddress}}/books/{{id}}
+
+###
+
+DELETE {{LibraryApi_HostAddress}}/copies/{{id}}
+
+###
